@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }}</title>
+</head>
+<body>
+    <h1>Blog do Dann</h1>
+    <h2>
+        {% if titulo %}
+            {{ titulo | lower }}
+        {% else %}
+            Pagina Principal
+        {% endif %}
+    </h2>
+    <img src="https://images.unsplash.com/photo-1628871733891-da1090c50271?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYzMDUwMzQ3MA&ixlib=rb-1.2.1&q=80&w=1080" alt="" width="100px">
+    
+    {% block conteudo %}
+    {% endblock %}
+</body>
+</html>

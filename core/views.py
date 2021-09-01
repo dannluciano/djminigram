@@ -1,6 +1,4 @@
 from django.shortcuts import render
-# from django.http import HttpResponse
-# from django.template import loader
 from django.utils import timezone
 
 
@@ -9,10 +7,12 @@ def home(request):
     
     context = {
         'data_atual': data,
-        'titulo': 'Minha Pagina',
     }
-    # template = loader.get_template('core/index.html')
-    # return HttpResponse(template.render(context))
-    
-
     return render(request, 'core/index.html', context)
+
+
+def sobre(request):
+    context = {
+        'titulo': 'Sobre'
+    }
+    return render(request, 'core/sobre.html', context)

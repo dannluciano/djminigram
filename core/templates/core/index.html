@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem Vindo ao Django</title>
-</head>
-<body>
-    <h1>
-        {{ titulo }}
-    </h1>
-    <strong>
-        {{ data_atual|date:"DATETIME_FORMAT"}}
-    </strong>
-    <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        Amet, porro harum molestias dolorem ea nulla ducimus ipsam ullam fugit blanditiis quasi voluptates mollitia eos ipsa fuga quisquam similique velit! Aspernatur?
-    </p>
-</body>
-</html>
+{% extends 'core/base.html' %}
+
+{% block conteudo %}
+
+<a href="{% url 'sobre' %}">Sobre</a>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur natus et nobis iste ullam nihil eum, aut quisquam dolor, est animi inventore minus vel atque. Sed sit molestiae nulla cum.</p>
+
+{% endblock conteudo %}
